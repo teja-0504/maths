@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #dom-msg {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            width: 180px;
+            border-radius: 5px;
+            border: none;
+        }
+
+
+        .nav1 {
+            background-color: #003366;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #FFD700;
+            font-size: 1.2em;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 25px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav a:hover {
+            color: #b41b1b;
+            border-bottom: 2px solid #FFD700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav1">
+            <a href="home.html">Home</a>
+            <a href="prime.html">Prime Number</a>
+            <a href="fib.html">Fibonacci Series</a>
+            <a href="factorial.html">Factorial of a Number</a>
+            <a href="number.html">Even or Odd</a>
+        </nav>
+       </header>
+
+    <div class="container">
+        <h1>Prime Number Checker</h1>
+        <input type="number" id="input-id" placeholder="Enter a number" />
+        <br>
+        <button>Check Prime</button>
+        <button>Clear</button>
+        <div id="dom-msg">Result</div>
+    </div>
+
+    <script>
+
+function checkPrime(num) {
+    if (num <= 1) {
+        return false;
+    }
+    for (
+        let i = 2;
+        i <= Math.sqrt(num); i++
+    ) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+document
+    .getElementById("sub-id")
+    .addEventListener("click",
+        function () {
+            let num =
+                document.getElementById("input-id").value;
+            let result = checkPrime(num);
+
+            if (result) {
+                document.getElementById("dom-msg").innerHTML =
+                    num + " is a prime number.";
+            } else {
+                document.getElementById("dom-msg").innerHTML =
+                    num + " is not a prime number.";
+            }
+        }
+    );
+document.getElementById("id-clear")
+    .addEventListener("click", () => {
+        document.getElementById("input-id").value = "";
+        document.getElementById("dom-msg").innerHTML = "Result";
+    })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Utilities Home</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+          
+            nav {
+                    background-color: #5a0f0f;
+                    padding: 15px 0;
+                    text-align: center;
+                    width: 100%;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+          
+            nav a {
+                    font-size: 1.2em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin: 0 25px;
+                    transition: color 0.3s, border-bottom 0.3s;
+                    color: white;
+                }
+          
+            nav a:hover {
+                    color: #ffffff;
+                    border-bottom: 2px solid #FFD700;
+                }
+          
+            .container {
+                text-align: center;
+                padding: 20px;
+                border-radius: 8px;
+                background-color: white;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+          
+            h1 {
+                    font-size: 28px;
+                }
+          
+            button {
+                    margin: 10px;
+                    padding: 10px;
+                    width: 250px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    border: none;
+                }
+          
+                .btn-1 { background-color: #4CAF50; color: white; }
+                .btn-2 { background-color: #2196F3; color: white; }
+                .btn-3 { background-color: #FF9800; color: white; }
+                .btn-4 { background-color: #f44336; color: white; }
+        </style>
+</head>
+    <body>
+          
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="prime.html">Prime Number</a>
+            <a href="number.html">Odd or Even</a>
+            <a href="fib.html">Fibonacci Series</a>
+            <a href="factorial.html">Factorial Calculator</a>
+        </nav>
+          
+        <div class="container">
+            <h1>Choose an operation</h1>
+            <button onclick="window.location.href='prime.html'">Prime Number Checker</button>
+            <button onclick="window.location.href='number.html'">Odd or Even Checker</button>
+            <button onclick="window.location.href='fib.html'">Fibonacci Series Generator</button>
+            <button onclick="window.location.href='factorial.html'">Factorial Calculator</button>
+        </div>
+          
+    </body>
+ </html>
